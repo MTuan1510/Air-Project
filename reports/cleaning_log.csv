@@ -1,0 +1,3 @@
+Đã drop NH3, Xylene ở Gurugram (92.9% missing, gần như 1 khối liên tục)
+Phát hiện & sửa flatline (chuỗi 0 liên tục ≥3 ngày → NaN) ở vài cột — vài cột do đó có % missing cao hơn lượt audit đầu tiên, không phải lỗi
+PM10 ở Gurugram vẫn còn ~51.5% missing sau xử lý (không đủ điều kiện drop nhưng vẫn cao)
