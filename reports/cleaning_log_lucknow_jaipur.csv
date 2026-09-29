@@ -1,0 +1,39 @@
+﻿step,city,column,issue,action,n_affected,reason
+3.x flatline,Lucknow,CO,"chuỗi số 0 liên tiếp >= 3 ngày (cảm biến treo, sentinel)",đổi thành NaN,5,nồng độ khí thật hiếm khi đứng ở đúng 0 nhiều ngày liền
+3.x flatline,Lucknow,Benzene,"chuỗi số 0 liên tiếp >= 3 ngày (cảm biến treo, sentinel)",đổi thành NaN,75,nồng độ khí thật hiếm khi đứng ở đúng 0 nhiều ngày liền
+3.x flatline,Lucknow,Toluene,"chuỗi số 0 liên tiếp >= 3 ngày (cảm biến treo, sentinel)",đổi thành NaN,72,nồng độ khí thật hiếm khi đứng ở đúng 0 nhiều ngày liền
+3.2 missing,Lucknow,PM10,thiếu 100% mọi năm,bỏ cột,2009,không có dữ liệu thật để phân tích hay nội suy
+3.2 missing,Lucknow,Xylene,thiếu 100% mọi năm,bỏ cột,2009,không có dữ liệu thật để phân tích hay nội suy
+3.3 impute,Lucknow,PM2.5,thiếu 102 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",24,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Lucknow,NO,thiếu 24 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",24,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Lucknow,NO2,thiếu 24 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",24,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Lucknow,NOx,thiếu 324 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",48,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Lucknow,NH3,thiếu 1004 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",5,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Lucknow,CO,thiếu 33 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",33,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Lucknow,SO2,thiếu 64 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",64,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Lucknow,O3,thiếu 27 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",27,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Lucknow,Benzene,thiếu 174 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",45,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Lucknow,Toluene,thiếu 208 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",64,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.x flatline,Jaipur,CO,"chuỗi số 0 liên tiếp >= 3 ngày (cảm biến treo, sentinel)",đổi thành NaN,60,nồng độ khí thật hiếm khi đứng ở đúng 0 nhiều ngày liền
+3.x flatline,Jaipur,Benzene,"chuỗi số 0 liên tiếp >= 3 ngày (cảm biến treo, sentinel)",đổi thành NaN,80,nồng độ khí thật hiếm khi đứng ở đúng 0 nhiều ngày liền
+3.x flatline,Jaipur,Toluene,"chuỗi số 0 liên tiếp >= 3 ngày (cảm biến treo, sentinel)",đổi thành NaN,4,nồng độ khí thật hiếm khi đứng ở đúng 0 nhiều ngày liền
+3.2 missing,Jaipur,Xylene,thiếu 100% mọi năm,bỏ cột,1114,không có dữ liệu thật để phân tích hay nội suy
+3.3 impute,Jaipur,PM2.5,thiếu 12 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",7,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Jaipur,PM10,thiếu 14 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",9,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Jaipur,NO,thiếu 16 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",11,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Jaipur,NO2,thiếu 14 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",9,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Jaipur,NH3,thiếu 15 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",10,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Jaipur,CO,thiếu 67 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",6,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Jaipur,SO2,thiếu 12 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",7,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Jaipur,O3,thiếu 15 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",10,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Jaipur,Benzene,thiếu 102 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",49,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+3.3 impute,Jaipur,Toluene,thiếu 27 ngày (sau flatline),"nội suy theo thời gian, khoảng <= 14 ngày",22,chuỗi thời gian liên tục; khoảng dài hơn giữ NaN để không bịa số
+4.2 outlier,Lucknow,PM2.5,"3 điểm nghi lỗi cảm biến: 2015-03-20, 2015-03-22, 2015-03-21","đặt NaN (không nội suy), gắn cờ suspect_sensor_error",3,"đỉnh cô lập, trái mùa, chất khác không tăng theo; chưa đối chiếu được nguồn CPCB nên gọi là NGHI lỗi"
+4.1 outlier,Lucknow,PM2.5,"36 điểm IQR, 20 điểm ngữ cảnh","giữ nguyên giá trị, chỉ gắn cờ (*_iqr_flag, *_ctx_flag)",17,đỉnh mùa đông/bụi/Diwali là sự kiện thật; xóa sẽ làm lệch xu hướng
+4.2 outlier,Lucknow,AQI,"3 điểm nghi lỗi cảm biến: 2015-03-22, 2015-03-23, 2015-03-21","đặt NaN (không nội suy), gắn cờ suspect_sensor_error",3,"đỉnh cô lập, trái mùa, chất khác không tăng theo; chưa đối chiếu được nguồn CPCB nên gọi là NGHI lỗi"
+4.1 outlier,Lucknow,AQI,"0 điểm IQR, 7 điểm ngữ cảnh","giữ nguyên giá trị, chỉ gắn cờ (*_iqr_flag, *_ctx_flag)",4,đỉnh mùa đông/bụi/Diwali là sự kiện thật; xóa sẽ làm lệch xu hướng
+4.2 outlier,Jaipur,PM2.5,1 điểm nghi lỗi cảm biến: 2018-02-06,"đặt NaN (không nội suy), gắn cờ suspect_sensor_error",1,"đỉnh cô lập, trái mùa, chất khác không tăng theo; chưa đối chiếu được nguồn CPCB nên gọi là NGHI lỗi"
+4.1 outlier,Jaipur,PM2.5,"32 điểm IQR, 3 điểm ngữ cảnh","giữ nguyên giá trị, chỉ gắn cờ (*_iqr_flag, *_ctx_flag)",2,đỉnh mùa đông/bụi/Diwali là sự kiện thật; xóa sẽ làm lệch xu hướng
+4.2 outlier,Jaipur,AQI,1 điểm nghi lỗi cảm biến: 2018-02-06,"đặt NaN (không nội suy), gắn cờ suspect_sensor_error",1,"đỉnh cô lập, trái mùa, chất khác không tăng theo; chưa đối chiếu được nguồn CPCB nên gọi là NGHI lỗi"
+4.1 outlier,Jaipur,AQI,"38 điểm IQR, 3 điểm ngữ cảnh","giữ nguyên giá trị, chỉ gắn cờ (*_iqr_flag, *_ctx_flag)",3,đỉnh mùa đông/bụi/Diwali là sự kiện thật; xóa sẽ làm lệch xu hướng
+4.3 consistency,Jaipur,"PM2.5,PM10","4 ngày PM2.5 > 1,2 x PM10 (vô lý vì PM10 gồm cả PM2.5)","giữ nguyên, gắn cờ pm25_gt_pm10_flag",4,"không biết cột nào sai (ví dụ 08/07/2017 PM10 chỉ 1,02); cần đối chiếu nguồn trước khi sửa"
