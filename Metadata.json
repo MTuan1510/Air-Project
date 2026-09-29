@@ -1,0 +1,56 @@
+{
+  "dataset_name": "Air Quality Data in India (2015-2020) — city_day",
+  "description": "Dữ liệu chất lượng không khí theo ngày của các thành phố ở Ấn Độ, dùng để phân tích xu hướng, mùa vụ và so sánh mức độ ô nhiễm không khí theo thời gian.",
+  "source": "Kaggle — rohanrao/air-quality-data-in-india",
+  "source_url": "https://www.kaggle.com/datasets/rohanrao/air-quality-data-in-india",
+  "original_source": "Central Pollution Control Board (CPCB), Government of India — https://cpcb.nic.in/",
+  "collection_method": "Tải trực tiếp file city_day.csv từ Kaggle, không chỉnh sửa nội dung gốc",
+  "data_file": "data/raw/city_day.csv",
+  "data_format": "CSV",
+  "number_of_rows": 29531,
+  "number_of_cities": 26,
+  "date_range": {
+    "from": "2015-01-01",
+    "to": "2020-07-01"
+  },
+  "fields": {
+    "City": "Tên thành phố",
+    "Date": "Ngày quan trắc",
+    "PM2.5": "Bụi mịn PM2.5",
+    "PM10": "Bụi PM10",
+    "NO": "Nitric oxide",
+    "NO2": "Nitrogen dioxide",
+    "NOx": "Tổng hợp NOx",
+    "NH3": "Ammonia",
+    "CO": "Carbon monoxide",
+    "SO2": "Sulphur dioxide",
+    "O3": "Ozone (mặt đất)",
+    "Benzene": "Benzene",
+    "Toluene": "Toluene",
+    "Xylene": "Xylene",
+    "AQI": "Chỉ số chất lượng không khí (Air Quality Index)",
+    "AQI_Bucket": "Phân loại mức AQI (Good/Satisfactory/Moderate/Poor/Very Poor/Severe)"
+  },
+  "missing_pct_by_column": {
+    "City": 0.0, "Date": 0.0,
+    "PM2.5": 15.6, "PM10": 37.7, "NO": 12.1, "NO2": 12.1, "NOx": 14.2,
+    "NH3": 35.0, "CO": 7.0, "SO2": 13.1, "O3": 13.6,
+    "Benzene": 19.0, "Toluene": 27.2, "Xylene": 61.3,
+    "AQI": 15.9, "AQI_Bucket": 15.9
+  },
+  "selected_cities_for_deep_analysis": {
+    "criteria": "Độ phủ AQI trong đúng khoảng thời gian thành phố đó có trạm hoạt động (không tính khoảng trước khi có trạm) — xem chi tiết cách tính và bảng đầy đủ 26 thành phố trong dictionary.md",
+    "cities": ["Delhi", "Bengaluru", "Lucknow", "Chennai", "Hyderabad", "Jaipur", "Amritsar", "Gurugram"],
+    "assigned_pairs": {
+      "member_1": ["Delhi", "Gurugram"],
+      "member_2": ["Bengaluru", "Amritsar"],
+      "member_3": ["Lucknow", "Jaipur"],
+      "member_4": ["Chennai", "Hyderabad"]
+    }
+  },
+  "team": {
+    "course": "Khoa học dữ liệu",
+    "members": ["Dương Minh Tuấn", "Trần Hoàng Tùng", "Phạm Tuấn Mạnh", "Lưu Văn Lịch"]
+  },
+  "collection_date": "2026-09-24"
+}
