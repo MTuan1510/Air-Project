@@ -1,0 +1,7 @@
+Đã drop Xylene ở Chennai (100% missing, không có giá trị thật nào)
+PM10 ở Chennai vẫn còn ~83.1% missing sau xử lý (chỉ có dữ liệu từ 2019, chưa đủ điều kiện drop 90% nhưng không nên dùng để so sánh xu hướng 2015-2018)
+NH3 ở Chennai còn ~19.8% và NH3 ở Hyderabad còn ~15.5% missing sau xử lý (khối trống dài, chủ ý giữ NaN)
+PM10 ở Hyderabad vẫn còn ~15.2% missing sau xử lý (khối trống dài, chủ ý giữ NaN)
+Phát hiện & sửa flatline (chuỗi 0 liên tục ≥3 ngày → NaN): Chennai - CO 40, Benzene 137, Toluene 143 ngày; Hyderabad - NOx 18, CO 67, Benzene 23, Toluene 14, Xylene 14 ngày
+AQI giữ nguyên ~6.2% (Chennai) và ~6.3% (Hyderabad) missing, không tự điền theo quy ước nhóm
+Chennai Benzene/Toluene còn các giá trị cực đoan năm 2015 (Benzene tới 391.9), chưa xử lý ở bước missing, sẽ xử lý ở bước outliers
