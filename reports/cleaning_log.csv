@@ -1,3 +1,29 @@
-Đã drop NH3, Xylene ở Gurugram (92.9% missing, gần như 1 khối liên tục)
-Phát hiện & sửa flatline (chuỗi 0 liên tục ≥3 ngày → NaN) ở vài cột — vài cột do đó có % missing cao hơn lượt audit đầu tiên, không phải lỗi
-PM10 ở Gurugram vẫn còn ~51.5% missing sau xử lý (không đủ điều kiện drop nhưng vẫn cao)
+Đã drop NH3, Xylene ở Gurugram (92.9% missing, gần như 1 khối liên tục),city,column,n_missing_before,pct_before,n_missing_after,pct_after,action
+Phát hiện & sửa flatline (chuỗi 0 liên tục ≥3 ngày → NaN) ở vài cột — vài cột do đó có % missing cao hơn lượt audit đầu tiên, không phải lỗi,,,,,,,,
+PM10 ở Gurugram vẫn còn ~51.5% missing sau xử lý (không đủ điều kiện drop nhưng vẫn cao),,,,,,,,,
+,,,Bengaluru,PM2.5,146.0,7.3,80.0,4.0,imputed/flatline->NaN
+,,,Bengaluru,PM10,360.0,17.9,318.0,15.8,imputed/flatline->NaN
+,,,Bengaluru,NO,6.0,0.3,0.0,0.0,imputed/flatline->NaN
+,,,Bengaluru,NO2,6.0,0.3,0.0,0.0,imputed/flatline->NaN
+,,,Bengaluru,NOx,4.0,0.2,312.0,15.5,imputed/flatline->NaN
+,,,Bengaluru,NH3,203.0,10.1,102.0,5.1,imputed/flatline->NaN
+,,,Bengaluru,CO,11.0,0.5,0.0,0.0,imputed/flatline->NaN
+,,,Bengaluru,SO2,6.0,0.3,0.0,0.0,imputed/flatline->NaN
+,,,Bengaluru,O3,144.0,7.2,28.0,1.4,imputed/flatline->NaN
+,,,Bengaluru,Benzene,266.0,13.2,87.0,4.3,imputed/flatline->NaN
+,,,Bengaluru,Toluene,93.0,4.6,1.0,0.0,imputed/flatline->NaN
+,,,Bengaluru,Xylene,2009.0,100.0,,,dropped
+,,,Bengaluru,AQI,99.0,4.9,99.0,4.9,unchanged
+,,,Amritsar,PM2.5,128.0,10.5,56.0,4.6,imputed/flatline->NaN
+,,,Amritsar,PM10,63.0,5.2,0.0,0.0,imputed/flatline->NaN
+,,,Amritsar,NO,93.0,7.6,36.0,2.9,imputed/flatline->NaN
+,,,Amritsar,NO2,44.0,3.6,0.0,0.0,imputed/flatline->NaN
+,,,Amritsar,NOx,289.0,23.7,255.0,20.9,imputed/flatline->NaN
+,,,Amritsar,NH3,42.0,3.4,0.0,0.0,imputed/flatline->NaN
+,,,Amritsar,CO,76.0,6.2,168.0,13.8,imputed/flatline->NaN
+,,,Amritsar,SO2,168.0,13.8,51.0,4.2,imputed/flatline->NaN
+,,,Amritsar,O3,115.0,9.4,36.0,2.9,imputed/flatline->NaN
+,,,Amritsar,Benzene,195.0,16.0,100.0,8.2,imputed/flatline->NaN
+,,,Amritsar,Toluene,212.0,17.4,119.0,9.7,imputed/flatline->NaN
+,,,Amritsar,Xylene,213.0,17.4,119.0,9.7,imputed/flatline->NaN
+,,,Amritsar,AQI,95.0,7.8,95.0,7.8,unchanged
