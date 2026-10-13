@@ -1,1 +1,27 @@
 
+,,,Chennai,PM2.5,117.0,5.8,84.0,4.2,imputed/flatline->NaN
+,,,Chennai,PM10,1707.0,85.0,1670.0,83.1,imputed/flatline->NaN
+,,,Chennai,NO,36.0,1.8,3.0,0.1,imputed/flatline->NaN
+,,,Chennai,NO2,36.0,1.8,3.0,0.1,imputed/flatline->NaN
+,,,Chennai,NOx,36.0,1.8,3.0,0.1,imputed/flatline->NaN
+,,,Chennai,NH3,462.0,23.0,397.0,19.8,imputed/flatline->NaN
+,,,Chennai,CO,25.0,1.2,0.0,0.0,imputed/flatline->NaN
+,,,Chennai,SO2,36.0,1.8,3.0,0.1,imputed/flatline->NaN
+,,,Chennai,O3,49.0,2.4,3.0,0.1,imputed/flatline->NaN
+,,,Chennai,Benzene,285.0,14.2,107.0,5.3,imputed/flatline->NaN
+,,,Chennai,Toluene,253.0,12.6,55.0,2.7,imputed/flatline->NaN
+,,,Chennai,Xylene,2009.0,100.0,,,dropped
+,,,Chennai,AQI,125.0,6.2,125.0,6.2,unchanged
+,,,Hyderabad,PM2.5,115.0,5.7,91.0,4.5,imputed/flatline->NaN
+,,,Hyderabad,PM10,355.0,17.7,304.0,15.2,imputed/flatline->NaN
+,,,Hyderabad,NO,28.0,1.4,5.0,0.2,imputed/flatline->NaN
+,,,Hyderabad,NO2,28.0,1.4,5.0,0.2,imputed/flatline->NaN
+,,,Hyderabad,NOx,7.0,0.3,5.0,0.2,imputed/flatline->NaN
+,,,Hyderabad,NH3,360.0,17.9,310.0,15.5,imputed/flatline->NaN
+,,,Hyderabad,CO,5.0,0.2,32.0,1.6,imputed/flatline->NaN
+,,,Hyderabad,SO2,26.0,1.3,5.0,0.2,imputed/flatline->NaN
+,,,Hyderabad,O3,26.0,1.3,5.0,0.2,imputed/flatline->NaN
+,,,Hyderabad,Benzene,127.0,6.3,101.0,5.0,imputed/flatline->NaN
+,,,Hyderabad,Toluene,127.0,6.3,101.0,5.0,imputed/flatline->NaN
+,,,Hyderabad,Xylene,127.0,6.3,,,dropped
+,,,Hyderabad,AQI,126.0,6.3,126.0,6.3,unchanged
