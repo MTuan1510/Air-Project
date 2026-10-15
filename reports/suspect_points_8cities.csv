@@ -1,0 +1,94 @@
+﻿city,date,column,value_original,gap_vs_neighbors,month,pm25_div_pm10,other_gases_up,suggestion,action
+Amritsar,2017-05-06,AQI,117.0,1.1,5,2.15,1/6,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
+Amritsar,2017-05-08,AQI,110.0,0.9,5,7.47,1/6,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
+Amritsar,2017-05-09,AQI,122.0,1.1,5,5.43,0/6,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
+Amritsar,2017-05-11,AQI,539.0,4.6,5,2.71,1/6,that (chat khac cung tang),giữ nguyên
+Amritsar,2018-06-14,AQI,732.0,4.8,6,0.21,2/10,that (chat khac cung tang),giữ nguyên
+Amritsar,2018-06-15,AQI,869.0,5.9,6,0.33,2/10,that (chat khac cung tang),giữ nguyên
+Amritsar,2018-06-16,AQI,695.0,4.8,6,0.36,2/10,that (chat khac cung tang),giữ nguyên
+Amritsar,2020-06-03,AQI,478.0,7.5,6,0.05,1/10,that (chat khac cung tang),giữ nguyên
+Amritsar,2017-05-06,PM2.5,296.8,3.7,5,2.15,1/6,"NGHI LOI (PM2.5 > 1,5 x PM10)",đặt NaN
+Amritsar,2017-05-08,PM2.5,868.7,10.9,5,7.47,1/6,"NGHI LOI (PM2.5 > 1,5 x PM10)",đặt NaN
+Amritsar,2017-05-09,PM2.5,850.7,10.4,5,5.43,0/6,"NGHI LOI (PM2.5 > 1,5 x PM10)",đặt NaN
+Amritsar,2017-05-10,PM2.5,832.8,10.2,5,5.72,1/6,"NGHI LOI (PM2.5 > 1,5 x PM10)",đặt NaN
+Amritsar,2017-05-11,PM2.5,595.9,7.3,5,2.71,1/6,"NGHI LOI (PM2.5 > 1,5 x PM10)",đặt NaN
+Bengaluru,2015-07-06,AQI,309.0,1.9,7,,3/9,that (chat khac cung tang),giữ nguyên
+Bengaluru,2016-07-18,AQI,62.0,1.1,7,7.15,2/10,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
+Bengaluru,2016-07-19,AQI,308.0,5.4,7,2.17,2/10,"NGHI LOI (co lap, trai mua)",đặt NaN
+Bengaluru,2016-11-23,AQI,335.0,2.8,11,0.28,4/9,that (mua cao diem),giữ nguyên
+Bengaluru,2016-12-13,AQI,342.0,3.4,12,1.31,1/9,that (chat khac cung tang),giữ nguyên
+Bengaluru,2017-07-08,AQI,108.0,1.2,7,2.61,0/9,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
+Bengaluru,2018-05-01,AQI,352.0,3.6,5,0.78,0/9,chua ro -> giu + co,giữ nguyên
+Bengaluru,2016-03-20,PM2.5,239.5,3.7,3,1.26,0/10,chua ro -> giu + co,giữ nguyên
+Bengaluru,2016-07-18,PM2.5,218.2,4.8,7,7.15,2/10,"NGHI LOI (PM2.5 > 1,5 x PM10)",đặt NaN
+Bengaluru,2016-12-13,PM2.5,204.2,5.9,12,1.31,1/9,chua ro -> giu + co,giữ nguyên
+Bengaluru,2017-07-07,PM2.5,256.0,8.1,7,2.02,0/9,"NGHI LOI (PM2.5 > 1,5 x PM10)",đặt NaN
+Bengaluru,2017-07-08,PM2.5,313.6,10.5,7,2.61,0/9,"NGHI LOI (PM2.5 > 1,5 x PM10)",đặt NaN
+Chennai,2015-03-28,AQI,448.0,1.4,3,,1/8,chua ro -> giu + co,giữ nguyên
+Chennai,2016-09-20,AQI,437.0,2.6,9,,5/8,that (chat khac cung tang),giữ nguyên
+Chennai,2016-09-21,AQI,449.0,2.6,9,,4/8,that (chat khac cung tang),giữ nguyên
+Chennai,2016-09-22,AQI,434.0,2.5,9,,3/8,that (chat khac cung tang),giữ nguyên
+Chennai,2017-03-10,AQI,148.0,1.9,3,,1/8,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
+Chennai,2017-03-16,AQI,350.0,4.2,3,,2/8,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
+Chennai,2017-10-19,AQI,431.0,4.9,10,,5/9,that (chat khac cung tang),giữ nguyên
+Chennai,2015-03-27,PM2.5,266.3,2.5,3,,2/8,chua ro -> giu + co,giữ nguyên
+Chennai,2017-01-10,PM2.5,293.4,4.9,1,,1/8,chua ro -> giu + co,giữ nguyên
+Chennai,2017-03-10,PM2.5,227.2,6.1,3,,1/8,"NGHI LOI (co lap, trai mua)",đặt NaN
+Chennai,2017-03-16,PM2.5,286.1,8.3,3,,2/8,"NGHI LOI (co lap, trai mua)",đặt NaN
+Chennai,2017-10-19,PM2.5,226.7,5.5,10,,5/9,that (chat khac cung tang),giữ nguyên
+Delhi,2016-11-06,AQI,676.0,1.3,11,0.97,1/10,that (mua cao diem),giữ nguyên
+Delhi,2016-11-07,AQI,716.0,1.4,11,0.93,0/10,that (mua cao diem),giữ nguyên
+Delhi,2017-11-08,AQI,675.0,1.6,11,0.8,3/10,that (mua cao diem),giữ nguyên
+Delhi,2017-11-09,AQI,677.0,1.6,11,0.76,2/10,that (mua cao diem),giữ nguyên
+Delhi,2019-11-03,AQI,659.0,1.6,11,0.82,1/10,that (mua cao diem),giữ nguyên
+Delhi,2016-11-02,PM2.5,538.0,1.5,11,0.78,1/10,that (mua cao diem),giữ nguyên
+Delhi,2016-11-05,PM2.5,588.4,1.7,11,0.77,1/10,that (mua cao diem),giữ nguyên
+Delhi,2016-11-06,PM2.5,685.4,2.0,11,0.97,1/10,that (mua cao diem),giữ nguyên
+Delhi,2017-11-08,PM2.5,639.2,2.7,11,0.8,3/10,that (mua cao diem),giữ nguyên
+Delhi,2019-11-03,PM2.5,582.3,2.5,11,0.82,1/10,that (mua cao diem),giữ nguyên
+Gurugram,2016-03-10,AQI,676.0,1.5,3,,2/6,that (chat khac cung tang),giữ nguyên
+Gurugram,2016-11-03,AQI,708.0,1.7,11,,1/8,that (mua cao diem),giữ nguyên
+Gurugram,2016-11-06,AQI,684.0,1.7,11,,0/8,that (mua cao diem),giữ nguyên
+Gurugram,2017-07-09,AQI,529.0,1.4,7,,0/7,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
+Gurugram,2017-07-30,AQI,482.0,6.0,7,,0/7,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
+Gurugram,2017-08-30,AQI,891.0,9.2,8,,2/7,that (chat khac cung tang),giữ nguyên
+Gurugram,2018-06-14,AQI,670.0,2.1,6,3.34,0/8,that (chat khac cung tang),giữ nguyên
+Gurugram,2016-03-10,PM2.5,914.9,2.9,3,,2/6,chua ro -> giu + co,giữ nguyên
+Gurugram,2016-03-17,PM2.5,894.8,2.3,3,,0/6,chua ro -> giu + co,giữ nguyên
+Gurugram,2017-07-09,PM2.5,821.4,5.8,7,,0/7,"NGHI LOI (co lap, trai mua)",đặt NaN
+Gurugram,2017-07-30,PM2.5,858.7,19.6,7,,0/7,"NGHI LOI (co lap, trai mua)",đặt NaN
+Gurugram,2017-08-29,PM2.5,950.0,19.3,8,,2/5,"NGHI LOI (co lap, trai mua)",đặt NaN
+Hyderabad,2015-06-02,AQI,661.0,5.4,6,,0/6,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
+Hyderabad,2015-06-24,AQI,348.0,3.4,6,,0/6,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
+Hyderabad,2015-10-30,AQI,487.0,2.6,10,6.22,0/10,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
+Hyderabad,2015-10-31,AQI,502.0,2.5,10,2.59,0/10,that (mua cao diem),giữ nguyên
+Hyderabad,2016-02-21,AQI,442.0,3.9,2,5.59,6/10,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
+Hyderabad,2016-02-22,AQI,510.0,4.6,2,3.7,5/10,that (chat khac cung tang),giữ nguyên
+Hyderabad,2016-06-16,AQI,737.0,6.6,6,,1/8,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
+Hyderabad,2016-07-12,AQI,495.0,5.0,7,,1/8,that (chat khac cung tang),giữ nguyên
+Hyderabad,2015-06-02,PM2.5,539.1,10.9,6,,0/6,"NGHI LOI (co lap, trai mua)",đặt NaN
+Hyderabad,2015-06-24,PM2.5,467.7,17.4,6,,0/6,"NGHI LOI (co lap, trai mua)",đặt NaN
+Hyderabad,2015-10-30,PM2.5,516.2,6.0,10,6.22,0/10,"NGHI LOI (PM2.5 > 1,5 x PM10)",đặt NaN
+Hyderabad,2016-02-21,PM2.5,525.1,10.6,2,5.59,6/10,"NGHI LOI (PM2.5 > 1,5 x PM10)",đặt NaN
+Hyderabad,2016-06-16,PM2.5,571.0,17.5,6,,1/8,"NGHI LOI (co lap, trai mua)",đặt NaN
+Jaipur,2018-02-06,AQI,305.0,1.9,2,2.53,1/10,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN (làm ở notebook 02)
+Jaipur,2018-04-21,AQI,434.0,2.9,4,0.27,1/10,that (chat khac cung tang),giữ nguyên
+Jaipur,2018-06-02,AQI,379.0,2.2,6,0.24,1/10,that (chat khac cung tang),giữ nguyên
+Jaipur,2019-04-08,AQI,457.0,3.4,4,0.2,1/10,that (chat khac cung tang),giữ nguyên
+Jaipur,2019-05-16,AQI,343.0,2.6,5,0.31,1/10,that (chat khac cung tang),giữ nguyên
+Jaipur,2019-10-28,AQI,355.0,2.1,10,0.69,4/10,that (mua cao diem),giữ nguyên
+Jaipur,2017-11-12,PM2.5,173.7,1.7,11,0.78,4/10,that (mua cao diem),giữ nguyên
+Jaipur,2017-11-19,PM2.5,247.9,2.6,11,1.13,1/10,that (mua cao diem),giữ nguyên
+Jaipur,2017-11-26,PM2.5,165.6,1.6,11,0.66,5/9,that (mua cao diem),giữ nguyên
+Jaipur,2018-02-06,PM2.5,311.4,4.5,2,2.53,1/10,"NGHI LOI (PM2.5 > 1,5 x PM10)",đặt NaN (làm ở notebook 02)
+Jaipur,2019-10-28,PM2.5,219.7,3.3,10,0.69,4/10,that (chat khac cung tang),giữ nguyên
+Lucknow,2015-03-21,AQI,607.0,5.3,3,,1/8,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN (làm ở notebook 02)
+Lucknow,2015-03-22,AQI,707.0,6.1,3,,0/8,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN (làm ở notebook 02)
+Lucknow,2015-03-23,AQI,699.0,6.1,3,,0/8,"NGHI LOI (co lap, trai mua)",đặt NaN (làm ở notebook 02)
+Lucknow,2015-12-08,AQI,584.0,1.4,12,,2/8,that (mua cao diem),giữ nguyên
+Lucknow,2016-11-08,AQI,604.0,1.6,11,,1/8,that (mua cao diem),giữ nguyên
+Lucknow,2015-03-20,PM2.5,742.7,12.2,3,,1/8,"NGHI LOI (co lap, trai mua)",đặt NaN (làm ở notebook 02)
+Lucknow,2015-03-21,PM2.5,518.1,8.7,3,,1/8,"NGHI LOI (co lap, trai mua)",đặt NaN (làm ở notebook 02)
+Lucknow,2015-03-22,PM2.5,674.4,11.5,3,,0/8,"NGHI LOI (co lap, trai mua)",đặt NaN (làm ở notebook 02)
+Lucknow,2015-12-07,PM2.5,506.0,2.0,12,,3/6,that (mua cao diem),giữ nguyên
+Lucknow,2016-11-08,PM2.5,499.1,2.7,11,,1/8,that (mua cao diem),giữ nguyên

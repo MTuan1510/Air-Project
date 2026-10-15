@@ -39,9 +39,11 @@
 | Theo vết missing (12) | `<cột>_was_missing` | `True` nếu ô đó thiếu ở dữ liệu gốc hoặc là chuỗi số 0 treo (flatline, ≥ 3 ngày) đã bị chuyển thành NaN. Dùng để biết ô nào là giá trị nội suy: `was_missing = True` và giá trị khác NaN. |
 | Outlier (11) | `<cột>_is_outlier` | `True` nếu giá trị vượt ngưỡng IQR×1,5 **tính riêng theo tháng dương lịch**. Chỉ đánh dấu, **không** sửa hay xoá giá trị. Không áp dụng cho `AQI`. |
 | Kiểm tra logic | `pm25_gt_pm10_flag` | `True` nếu PM2.5 > 1,2 × PM10 (vô lý vì PM10 gồm cả PM2.5). Để trống khi thiếu PM2.5 hoặc PM10 (Lucknow luôn trống). Chỉ đánh dấu. |
-| Nghi lỗi cảm biến | `suspect_sensor_error` | Chỉ **Lucknow và Jaipur** đã làm bước này (`True` = đã đặt NaN cho PM2.5/AQI ngày đó). 6 thành phố còn lại để trống = **chưa kiểm tra**. |
+| Nghi lỗi cảm biến | `suspect_sensor_error` | `True` nếu ngày đó bị đặt NaN cho PM2.5 và/hoặc AQI vì **nghi lỗi cảm biến** (đỉnh cô lập, trái mùa, chất khác không tăng theo; hoặc PM2.5 > 1,5 × PM10). Cả 8 thành phố dùng cùng một luật, chỉ xét top 5 điểm lớn nhất của PM2.5 và của AQI. Tổng 24 ngày; danh sách và giá trị gốc nằm trong `reports/suspect_points_8cities.csv`. Gọi là "nghi lỗi", chưa đối chiếu được nguồn CPCB. |
 
-**Quy tắc làm sạch chung:** chuỗi số 0 liên tiếp ≥ 3 ngày → NaN; nội suy theo thời gian chỉ cho khoảng thiếu ≤ 14 ngày; khoảng dài hơn giữ nguyên NaN.
+**Quy tắc làm sạch chung:** chuỗi số 0 liên tiếp ≥ 3 ngày → NaN; nội suy theo thời gian chỉ cho khoảng thiếu ≤ 14 ngày; khoảng dài hơn giữ nguyên NaN. Điểm nghi lỗi cảm biến → NaN, không nội suy.
+
+**Quy ước dùng cột làm biến:** một cột (trong một thành phố) thiếu **dưới 60%** thì còn dùng được; từ 60% trở lên thì không dùng. Theo quy ước này, các cột không dùng được là PM10 ở Lucknow (100%) và Chennai (83%), NH3 ở Gurugram (93%). Xem cột `dung_lam_bien_mo_hinh` trong `reports/cleaning_summary_8cities.csv`.
 
 **Giới hạn cần nhớ khi phân tích:**
 - `PM10` thiếu 100% ở Lucknow, 83% ở Chennai, 52% ở Gurugram; `NH3` thiếu 93% ở Gurugram, 50% ở Lucknow.
