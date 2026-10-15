@@ -34,13 +34,3 @@ Thứ tự chạy: `01` → `02` → `03` → `04` → `05` → `06` → **`07_m
 Notebook 07 chỉ cần dữ liệu đã có trong `data/` nên có thể chạy lại độc lập (kết quả giống hệt mỗi lần chạy).
 
 > Notebook 02, 03, 06 có đoạn mount Google Drive / đường dẫn `/content/...` dành cho Colab. Chạy trên máy cá nhân thì bỏ qua các ô đó và dùng đường dẫn tương đối `../data/...`.
-
-## 5. Dữ liệu sau làm sạch
-File dùng cho phân tích: **`data/processed/air_quality_8cities.csv`** (14.056 dòng, 40 cột, 8 thành phố).
-- Đã bỏ cột `Xylene` (thiếu 100% ở 4/8 thành phố).
-- Không nội suy `AQI` (là biến kết quả); `AQI` còn thiếu 0–13% tuỳ thành phố.
-- `PM10` không có ở Lucknow (thiếu 100%), thiếu 83% ở Chennai và 52% ở Gurugram; `NH3` thiếu 93% ở Gurugram.
-- 24 ngày nghi lỗi cảm biến ở 7/8 thành phố (Delhi không có) đã được đặt NaN bằng cùng một luật; danh sách và giá trị gốc ở `reports/suspect_points_8cities.csv`.
-- Quy ước nhóm: cột thiếu dưới 60% (trong một thành phố) thì dùng được làm biến.
-- Cờ `*_was_missing`, `*_is_outlier`, `pm25_gt_pm10_flag`, `suspect_sensor_error`: xem mô tả trong `Data_dictionary.md`.
-- Mỗi thành phố có số ngày khác nhau (1.114 – 2.009 ngày). So sánh giữa các thành phố nên dùng khoảng chung 14/06/2017 – 01/07/2020, hoặc ghi rõ khác biệt này.
