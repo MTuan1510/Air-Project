@@ -43,10 +43,10 @@
 
 **Quy tắc làm sạch chung:** chuỗi số 0 liên tiếp ≥ 3 ngày → NaN; nội suy theo thời gian chỉ cho khoảng thiếu ≤ 14 ngày; khoảng dài hơn giữ nguyên NaN. Điểm nghi lỗi cảm biến → NaN, không nội suy.
 
-**Quy ước dùng cột làm biến:** một cột (trong một thành phố) thiếu **dưới 60%** thì còn dùng được; từ 60% trở lên thì không dùng. Theo quy ước này, các cột không dùng được là PM10 ở Lucknow (100%) và Chennai (83%), NH3 ở Gurugram (93%). Xem cột `dung_lam_bien_mo_hinh` trong `reports/cleaning_summary_8cities.csv`.
+**Quy ước dùng cột làm biến:** một cột (trong một thành phố) thiếu **dưới 60%** thì còn dùng được; từ 60% trở lên thì không dùng. Theo quy ước này, các cột không dùng được là PM10 ở Lucknow (100%) và Chennai (84,5%), NH3 ở Gurugram (92,9%). Xem cột `dung_lam_bien_mo_hinh` trong `reports/cleaning_summary_8cities.csv`.
 
 **Giới hạn cần nhớ khi phân tích:**
-- `PM10` thiếu 100% ở Lucknow, 83% ở Chennai, 52% ở Gurugram; `NH3` thiếu 93% ở Gurugram, 50% ở Lucknow.
+- `PM10` thiếu 100% ở Lucknow, 84,5% ở Chennai, 52,4% ở Gurugram; `NH3` thiếu 92,9% ở Gurugram, 49,7% ở Lucknow.
 - Độ dài chuỗi mỗi thành phố khác nhau (Delhi, Bengaluru, Chennai, Lucknow từ 01/2015; Gurugram từ 11/2015; Amritsar từ 02/2017; Jaipur từ 06/2017).
 - Dữ liệu kết thúc 01/07/2020 nên có chứa giai đoạn phong toả COVID-19.
 

@@ -113,6 +113,20 @@ def diagnose_missing(city_df, cols=POLLUTANT_COLS, block_ratio_threshold=0.5,
     return pd.DataFrame(rows, columns=['col', 'pct_missing', 'block_ratio_%', 'action']).set_index('col')
 
 
+def _interpolate_short_gaps(s, max_gap=14):
+    """Nội suy theo thời gian CHỈ khoảng thiếu <= max_gap ngày và nằm giữa 2 giá trị thật.
+    Khoảng dài hơn được giữ NGUYÊN là NaN (cả khoảng).
+
+    Sửa lỗi cũ: interpolate(limit=14) của pandas điền 14 ngày ĐẦU của khoảng dài rồi mới
+    dừng, tức vẫn bịa số cho khoảng thiếu > 14 ngày (trái với chú thích hàm). Cách làm
+    tương đương gap_utils.interpolate_short_gaps."""
+    filled = s.interpolate(method='time', limit_area='inside')
+    m = s.isna()
+    run_len = m.groupby((~m).cumsum()).transform('sum')
+    filled[m & (run_len > max_gap)] = np.nan
+    return filled
+
+
 def impute_time_series(city_df, city_name, drop_cols=None, cols=POLLUTANT_COLS,
                         max_short_gap=14, flatline_min_run=3,
                         derive_aqi_bucket=True, verbose=True):
@@ -151,8 +165,8 @@ def impute_time_series(city_df, city_name, drop_cols=None, cols=POLLUTANT_COLS,
     # 4) nội suy CHỈ gap ngắn (AQI không nằm trong `cols` nên không bị đụng vào)
     df = df.set_index('Date')
     interp_cols = [c for c in cols if c in df.columns]
-    df[interp_cols] = df[interp_cols].interpolate(method='time', limit=max_short_gap,
-                                                    limit_area='inside')
+    for c in interp_cols:
+        df[c] = _interpolate_short_gaps(df[c], max_short_gap)
     df = df.reset_index()
 
     # 5) suy AQI_Bucket từ AQI thật (AQI chưa từng bị đụng vào ở bước 4)

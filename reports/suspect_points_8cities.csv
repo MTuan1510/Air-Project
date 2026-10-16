@@ -18,7 +18,7 @@ Bengaluru,2016-07-19,AQI,308.0,5.4,7,2.17,2/10,"NGHI LOI (co lap, trai mua)",đ�
 Bengaluru,2016-11-23,AQI,335.0,2.8,11,0.28,4/9,that (mua cao diem),giữ nguyên
 Bengaluru,2016-12-13,AQI,342.0,3.4,12,1.31,1/9,that (chat khac cung tang),giữ nguyên
 Bengaluru,2017-07-08,AQI,108.0,1.2,7,2.61,0/9,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
-Bengaluru,2018-05-01,AQI,352.0,3.6,5,0.78,0/9,chua ro -> giu + co,giữ nguyên
+Bengaluru,2018-05-01,AQI,352.0,3.6,5,,0/8,chua ro -> giu + co,giữ nguyên
 Bengaluru,2016-03-20,PM2.5,239.5,3.7,3,1.26,0/10,chua ro -> giu + co,giữ nguyên
 Bengaluru,2016-07-18,PM2.5,218.2,4.8,7,7.15,2/10,"NGHI LOI (PM2.5 > 1,5 x PM10)",đặt NaN
 Bengaluru,2016-12-13,PM2.5,204.2,5.9,12,1.31,1/9,chua ro -> giu + co,giữ nguyên
@@ -48,15 +48,15 @@ Delhi,2017-11-08,PM2.5,639.2,2.7,11,0.8,3/10,that (mua cao diem),giữ nguyên
 Delhi,2019-11-03,PM2.5,582.3,2.5,11,0.82,1/10,that (mua cao diem),giữ nguyên
 Gurugram,2016-03-10,AQI,676.0,1.5,3,,2/6,that (chat khac cung tang),giữ nguyên
 Gurugram,2016-11-03,AQI,708.0,1.7,11,,1/8,that (mua cao diem),giữ nguyên
-Gurugram,2016-11-06,AQI,684.0,1.7,11,,0/8,that (mua cao diem),giữ nguyên
+Gurugram,2016-11-06,AQI,684.0,1.7,11,,0/6,that (mua cao diem),giữ nguyên
 Gurugram,2017-07-09,AQI,529.0,1.4,7,,0/7,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
-Gurugram,2017-07-30,AQI,482.0,6.0,7,,0/7,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
+Gurugram,2017-07-30,AQI,482.0,6.0,7,,0/5,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
 Gurugram,2017-08-30,AQI,891.0,9.2,8,,2/7,that (chat khac cung tang),giữ nguyên
-Gurugram,2018-06-14,AQI,670.0,2.1,6,3.34,0/8,that (chat khac cung tang),giữ nguyên
+Gurugram,2018-06-14,AQI,670.0,2.1,6,,0/7,that (chat khac cung tang),giữ nguyên
 Gurugram,2016-03-10,PM2.5,914.9,2.9,3,,2/6,chua ro -> giu + co,giữ nguyên
 Gurugram,2016-03-17,PM2.5,894.8,2.3,3,,0/6,chua ro -> giu + co,giữ nguyên
 Gurugram,2017-07-09,PM2.5,821.4,5.8,7,,0/7,"NGHI LOI (co lap, trai mua)",đặt NaN
-Gurugram,2017-07-30,PM2.5,858.7,19.6,7,,0/7,"NGHI LOI (co lap, trai mua)",đặt NaN
+Gurugram,2017-07-30,PM2.5,858.7,19.6,7,,0/5,"NGHI LOI (co lap, trai mua)",đặt NaN
 Gurugram,2017-08-29,PM2.5,950.0,19.3,8,,2/5,"NGHI LOI (co lap, trai mua)",đặt NaN
 Hyderabad,2015-06-02,AQI,661.0,5.4,6,,0/6,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
 Hyderabad,2015-06-24,AQI,348.0,3.4,6,,0/6,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
