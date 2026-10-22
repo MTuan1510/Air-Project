@@ -71,7 +71,7 @@ Hyderabad,2015-06-24,PM2.5,467.7,17.4,6,,0/6,"NGHI LOI (co lap, trai mua)",đặ
 Hyderabad,2015-10-30,PM2.5,516.2,6.0,10,6.22,0/10,"NGHI LOI (PM2.5 > 1,5 x PM10)",đặt NaN
 Hyderabad,2016-02-21,PM2.5,525.1,10.6,2,5.59,6/10,"NGHI LOI (PM2.5 > 1,5 x PM10)",đặt NaN
 Hyderabad,2016-06-16,PM2.5,571.0,17.5,6,,1/8,"NGHI LOI (co lap, trai mua)",đặt NaN
-Jaipur,2018-02-06,AQI,305.0,1.9,2,2.53,1/10,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN (làm ở notebook 02)
+Jaipur,2018-02-06,AQI,305.0,1.9,2,2.53,1/10,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
 Jaipur,2018-04-21,AQI,434.0,2.9,4,0.27,1/10,that (chat khac cung tang),giữ nguyên
 Jaipur,2018-06-02,AQI,379.0,2.2,6,0.24,1/10,that (chat khac cung tang),giữ nguyên
 Jaipur,2019-04-08,AQI,457.0,3.4,4,0.2,1/10,that (chat khac cung tang),giữ nguyên
@@ -80,15 +80,15 @@ Jaipur,2019-10-28,AQI,355.0,2.1,10,0.69,4/10,that (mua cao diem),giữ nguyên
 Jaipur,2017-11-12,PM2.5,173.7,1.7,11,0.78,4/10,that (mua cao diem),giữ nguyên
 Jaipur,2017-11-19,PM2.5,247.9,2.6,11,1.13,1/10,that (mua cao diem),giữ nguyên
 Jaipur,2017-11-26,PM2.5,165.6,1.6,11,0.66,5/9,that (mua cao diem),giữ nguyên
-Jaipur,2018-02-06,PM2.5,311.4,4.5,2,2.53,1/10,"NGHI LOI (PM2.5 > 1,5 x PM10)",đặt NaN (làm ở notebook 02)
+Jaipur,2018-02-06,PM2.5,311.4,4.5,2,2.53,1/10,"NGHI LOI (PM2.5 > 1,5 x PM10)",đặt NaN
 Jaipur,2019-10-28,PM2.5,219.7,3.3,10,0.69,4/10,that (chat khac cung tang),giữ nguyên
-Lucknow,2015-03-21,AQI,607.0,5.3,3,,1/8,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN (làm ở notebook 02)
-Lucknow,2015-03-22,AQI,707.0,6.1,3,,0/8,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN (làm ở notebook 02)
-Lucknow,2015-03-23,AQI,699.0,6.1,3,,0/8,"NGHI LOI (co lap, trai mua)",đặt NaN (làm ở notebook 02)
+Lucknow,2015-03-21,AQI,607.0,5.3,3,,1/8,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
+Lucknow,2015-03-22,AQI,707.0,6.1,3,,0/8,NGHI LOI (theo PM2.5 nghi loi cung ngay),đặt NaN
+Lucknow,2015-03-23,AQI,699.0,6.1,3,,0/8,"NGHI LOI (co lap, trai mua)",đặt NaN
 Lucknow,2015-12-08,AQI,584.0,1.4,12,,2/8,that (mua cao diem),giữ nguyên
 Lucknow,2016-11-08,AQI,604.0,1.6,11,,1/8,that (mua cao diem),giữ nguyên
-Lucknow,2015-03-20,PM2.5,742.7,12.2,3,,1/8,"NGHI LOI (co lap, trai mua)",đặt NaN (làm ở notebook 02)
-Lucknow,2015-03-21,PM2.5,518.1,8.7,3,,1/8,"NGHI LOI (co lap, trai mua)",đặt NaN (làm ở notebook 02)
-Lucknow,2015-03-22,PM2.5,674.4,11.5,3,,0/8,"NGHI LOI (co lap, trai mua)",đặt NaN (làm ở notebook 02)
+Lucknow,2015-03-20,PM2.5,742.7,12.2,3,,1/8,"NGHI LOI (co lap, trai mua)",đặt NaN
+Lucknow,2015-03-21,PM2.5,518.1,8.7,3,,1/8,"NGHI LOI (co lap, trai mua)",đặt NaN
+Lucknow,2015-03-22,PM2.5,674.4,11.5,3,,0/8,"NGHI LOI (co lap, trai mua)",đặt NaN
 Lucknow,2015-12-07,PM2.5,506.0,2.0,12,,3/6,that (mua cao diem),giữ nguyên
 Lucknow,2016-11-08,PM2.5,499.1,2.7,11,,1/8,that (mua cao diem),giữ nguyên

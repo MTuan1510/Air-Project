@@ -1,7 +1,7 @@
 # Nhật ký làm sạch dữ liệu — Chất lượng không khí Ấn Độ (8 thành phố)
 
 **Nguồn:** Kaggle *Air Quality Data in India* (CPCB), `city_day.csv` · **Phạm vi:** Delhi, Gurugram, Lucknow, Jaipur, Bengaluru, Amritsar, Chennai, Hyderabad · **Giai đoạn:** 01/01/2015 – 01/07/2020
-**Quy trình:** notebook 01 → 07 (`src/utils.py`, `src/gap_utils.py`); file raw không bị sửa, chạy lại từ raw ra đúng cùng bảng gộp.
+**Quy trình:** `notebooks/01_cleaning.ipynb` (code ở `src/pipeline.py`, `src/utils.py`, `src/gap_utils.py`); bằng chứng cho từng quyết định ở `notebooks/02_cleaning_evidence.ipynb`; file raw không bị sửa, chạy lại từ raw ra đúng cùng bảng gộp.
 **Kiểm tra ban đầu (không phát sinh xử lý):** `city_day.csv` 29.531 dòng, 26 thành phố; lấy 8 thành phố = 14.056 dòng; 0 dòng trùng (City, Date), không đứt ngày, 0 giá trị âm, `AQI_Bucket` khớp thang CPCB.
 **Quy ước:** **ô** = một giá trị của một cột trong một ngày; **dòng** = một ngày của một thành phố. Ô bị đổi hoặc bị nghi ngờ đều có cờ đi kèm. Chi tiết từng thành phố × cột: `reports/cleaning_summary_8cities.csv`.
 

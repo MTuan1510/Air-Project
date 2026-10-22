@@ -15,12 +15,12 @@ Môn học: **Khoa học Dữ liệu** · Nhóm thực hiện: **4 thành viên*
 ## 3. Cấu trúc thư mục
 ```
 data/raw/          city_day.csv gốc (không sửa)
-data/interim/      các bước trung gian của từng thành phố
-data/processed/    <thành phố>_clean.csv và air_quality_8cities.csv (bảng gộp, dùng cho phân tích)
-notebooks/         01-06: làm sạch theo từng cặp thành phố; 07: chuẩn hoá và gộp 8 thành phố; 07b: nhật ký làm sạch
-src/               utils.py, gap_utils.py (hàm dùng chung)
-reports/           cleaning_log_8cities.csv (nhật ký đầy đủ, 36 dòng), cleaning_log_report_8cities.csv (bản rút gọn 13 dòng cho báo cáo), cleaning_summary_8cities.csv, suspect_points_8cities.csv, figures/
+data/processed/    air_quality_8cities.csv: bảng gộp 8 thành phố, dùng cho phân tích (do 01_cleaning tạo ra)
+notebooks/         01_cleaning, 02_cleaning_evidence, 03_eda; archive/ là các notebook cũ (xem archive/README.md)
+src/               pipeline.py (pipeline làm sạch 8 thành phố), utils.py, gap_utils.py (hàm làm sạch), eda_utils.py (hàm EDA)
+reports/           cleaning_log_8cities.md (nhật ký làm sạch), cleaning_summary_8cities.csv, suspect_points_8cities.csv, figures/
 ```
+`data/interim/` và các file `data/processed/<thành phố>_clean.csv` là sản phẩm trung gian của các notebook cũ, **không còn được dùng**; có thể xoá.
 
 ## 4. Hướng dẫn cài đặt và chạy
 ```bash
@@ -30,8 +30,14 @@ pip install -r Requirements.txt
 cd notebooks
 jupyter notebook
 ```
-Thứ tự chạy: `01` → `02` → `03` → `04` → `05` → `06` → `07_merge_8_cities` → `07b_cleaning_log_8cities`.
-Mỗi notebook chạy bằng *Kernel → Restart & Run All*. Đã kiểm tra: chạy lần lượt 01 → 07b từ file gốc cho ra đúng cùng bảng gộp, so từng ô. Notebook 07 và 07b cũng chạy lại độc lập được, kết quả giống hệt mỗi lần chạy.
-`07b` chỉ là code sinh ra nhật ký; **nhật ký nằm ở `reports/cleaning_log_8cities.csv`**.
+Chạy lần lượt, mỗi notebook bằng *Kernel -> Restart & Run All*:
 
-> Notebook 03 và 06 tự nhận Colab hay máy cá nhân (trên Colab thì clone repo, trên máy cá nhân dùng đường dẫn tương đối `../data/...`; bước tải file về chỉ chạy trên Colab). Notebook 02 cũng tự tìm thư mục gốc của repo.
+| Thứ tự | Notebook | Việc làm | Đầu ra chính |
+|---|---|---|---|
+| 1 | `01_cleaning.ipynb` | từ `city_day.csv` gốc: làm sạch 8 thành phố bằng một pipeline, gộp, kiểm tra bằng `assert` | `data/processed/air_quality_8cities.csv`, `reports/cleaning_summary_8cities.csv`, `reports/suspect_points_8cities.csv` |
+| 2 | `02_cleaning_evidence.ipynb` | bằng chứng đằng sau các quyết định làm sạch (ví dụ chi tiết Lucknow, Jaipur; đối chiếu và bằng chứng cho cả 8 thành phố) | `reports/cleaning_log_lucknow_jaipur.csv`, hình trong `reports/figures/` |
+| 3 | `03_eda.ipynb` | EDA: Phần A (ở đâu), B (khi nào), C (chất nào), kiểm tra độ nhạy, tổng hợp | `reports/figures/eda_00_*` đến `eda_05_*` |
+
+`02` và `03` đọc kết quả của `01`, nên chạy `01` trước. `01` không phụ thuộc file nào ngoài `data/raw/city_day.csv`. Kết quả từ raw trùng từng ô với bảng gộp mà các notebook cũ tạo ra.
+
+> Trên Colab, ô đầu của `01_cleaning` tự clone repo nếu chưa có. `02` và `03` cần mở từ thư mục `notebooks/` của repo.

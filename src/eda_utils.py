@@ -1,4 +1,4 @@
-"""Hàm và hằng số dùng chung cho các notebook EDA (08, 08a, 08b, 08c).
+"""Hàm và hằng số dùng chung cho notebook EDA (`notebooks/03_eda.ipynb`).
 
 Mọi biểu đồ trong báo cáo dựa vào file này để thống nhất quy ước (khoảng chung, ngưỡng AQI, mùa, màu).
 Đừng sửa nếu chưa báo cả nhóm: một thay đổi ở đây làm đổi biểu đồ của tất cả mọi người.
