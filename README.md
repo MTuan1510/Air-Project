@@ -15,9 +15,11 @@ Môn học: **Khoa học Dữ liệu** · Nhóm thực hiện: **4 thành viên*
 ## 3. Cấu trúc thư mục
 ```
 data/raw/          city_day.csv gốc (không sửa)
+data/raw/weather/  thời tiết theo giờ tải từ Open-Meteo (bản gốc, không sửa)
 data/processed/    air_quality_8cities.csv: bảng gộp 8 thành phố, dùng cho phân tích (do 01_cleaning tạo ra)
-notebooks/         01_cleaning, 02_cleaning_evidence, 03_eda; archive/ là các notebook cũ (xem archive/README.md)
-src/               pipeline.py (pipeline làm sạch 8 thành phố), utils.py, gap_utils.py (hàm làm sạch), eda_utils.py (hàm EDA)
+                   air_quality_8cities_weather.csv: bảng trên + 12 cột thời tiết (do 04_weather_merge tạo ra)
+notebooks/         01_cleaning, 02_cleaning_evidence, 03_eda, 04_weather_merge; archive/ là các notebook cũ (xem archive/README.md)
+src/               pipeline.py (pipeline làm sạch 8 thành phố), utils.py, gap_utils.py (hàm làm sạch), eda_utils.py (hàm EDA), weather_utils.py (tải và ghép thời tiết)
 reports/           cleaning_log_8cities.md (nhật ký làm sạch), cleaning_summary_8cities.csv, suspect_points_8cities.csv, figures/
 ```
 `data/interim/` và các file `data/processed/<thành phố>_clean.csv` là sản phẩm trung gian của các notebook cũ, **không còn được dùng**; có thể xoá.
@@ -37,7 +39,8 @@ Chạy lần lượt, mỗi notebook bằng *Kernel -> Restart & Run All*:
 | 1 | `01_cleaning.ipynb` | từ `city_day.csv` gốc: làm sạch 8 thành phố bằng một pipeline, gộp, kiểm tra bằng `assert` | `data/processed/air_quality_8cities.csv`, `reports/cleaning_summary_8cities.csv`, `reports/suspect_points_8cities.csv` |
 | 2 | `02_cleaning_evidence.ipynb` | bằng chứng đằng sau các quyết định làm sạch (ví dụ chi tiết Lucknow, Jaipur; đối chiếu và bằng chứng cho cả 8 thành phố) | `reports/cleaning_log_lucknow_jaipur.csv`, hình trong `reports/figures/` |
 | 3 | `03_eda.ipynb` | EDA: Phần A (ở đâu), B (khi nào), C (chất nào), kiểm tra độ nhạy, tổng hợp | `reports/figures/eda_00_*` đến `eda_05_*` |
+| 4 | `04_weather_merge.ipynb` | thêm biến thời tiết (Open-Meteo, ERA5) cho 8 thành phố: tải, kiểm tra, gộp theo ngày, ghép vào bảng chính | `data/processed/air_quality_8cities_weather.csv`, `data/processed/weather_daily_8cities.csv` |
 
-`02` và `03` đọc kết quả của `01`, nên chạy `01` trước. `01` không phụ thuộc file nào ngoài `data/raw/city_day.csv`. Kết quả từ raw trùng từng ô với bảng gộp mà các notebook cũ tạo ra.
+`02`, `03` và `04` đọc kết quả của `01`, nên chạy `01` trước. `04` cần có mạng ở lần chạy đầu (tải thời tiết), các lần sau đọc lại từ `data/raw/weather/`. `01` không phụ thuộc file nào ngoài `data/raw/city_day.csv`. Kết quả từ raw trùng từng ô với bảng gộp mà các notebook cũ tạo ra.
 
 > Trên Colab, ô đầu của `01_cleaning` tự clone repo nếu chưa có. `02` và `03` cần mở từ thư mục `notebooks/` của repo.
