@@ -32,25 +32,168 @@
     "AQI_Bucket": "Phân loại mức AQI (Good/Satisfactory/Moderate/Poor/Very Poor/Severe)"
   },
   "missing_pct_by_column": {
-    "City": 0.0, "Date": 0.0,
-    "PM2.5": 15.6, "PM10": 37.7, "NO": 12.1, "NO2": 12.1, "NOx": 14.2,
-    "NH3": 35.0, "CO": 7.0, "SO2": 13.1, "O3": 13.6,
-    "Benzene": 19.0, "Toluene": 27.2, "Xylene": 61.3,
-    "AQI": 15.9, "AQI_Bucket": 15.9
+    "City": 0.0,
+    "Date": 0.0,
+    "PM2.5": 15.6,
+    "PM10": 37.7,
+    "NO": 12.1,
+    "NO2": 12.1,
+    "NOx": 14.2,
+    "NH3": 35.0,
+    "CO": 7.0,
+    "SO2": 13.1,
+    "O3": 13.6,
+    "Benzene": 19.0,
+    "Toluene": 27.2,
+    "Xylene": 61.3,
+    "AQI": 15.9,
+    "AQI_Bucket": 15.9
+  },
+  "weather_source": {
+    "description": "Nguồn thứ hai: thời tiết theo ngày cho 8 thành phố được chọn, dùng để phân tích mối liên quan giữa thời tiết và AQI và làm biến cho mô hình dự đoán. Dữ liệu mô hình (tái phân tích), không phải số đo tại trạm.",
+    "source": "Open-Meteo Historical Weather API — dữ liệu tái phân tích ERA5 (ECMWF / Copernicus)",
+    "source_url": "https://open-meteo.com/en/docs/historical-weather-api",
+    "license": "CC BY 4.0 — ghi công: Weather data by Open-Meteo.com",
+    "collection_method": "Gọi API bằng src/weather_utils.py (notebooks/04_weather_merge.ipynb), mô hình era5, mỗi thành phố một điểm toạ độ, dữ liệu theo giờ rồi gộp theo ngày; bản tải về giữ nguyên, không sửa",
+    "temporal_range": {
+      "from": "2014-12-25",
+      "to": "2020-07-01",
+      "note": "Lấy dư từ 2014-12-25 để tạo biến trễ; bảng chính vẫn từ 2015-01-01"
+    },
+    "timezone": "Asia/Kolkata",
+    "units": {
+      "temperature": "°C",
+      "wind": "m/s",
+      "precipitation": "mm",
+      "pressure": "hPa",
+      "boundary_layer_height": "m"
+    },
+    "locations": {
+      "Delhi": {
+        "requested_lat": 28.61,
+        "requested_lon": 77.21,
+        "era5_grid_lat": 28.5,
+        "era5_grid_lon": 77.25,
+        "grid_elevation_m": 217
+      },
+      "Gurugram": {
+        "requested_lat": 28.46,
+        "requested_lon": 77.03,
+        "era5_grid_lat": 28.5,
+        "era5_grid_lon": 77.0,
+        "grid_elevation_m": 229
+      },
+      "Lucknow": {
+        "requested_lat": 26.85,
+        "requested_lon": 80.95,
+        "era5_grid_lat": 26.75,
+        "era5_grid_lon": 81.0,
+        "grid_elevation_m": 117
+      },
+      "Jaipur": {
+        "requested_lat": 26.91,
+        "requested_lon": 75.79,
+        "era5_grid_lat": 27.0,
+        "era5_grid_lon": 75.75,
+        "grid_elevation_m": 430
+      },
+      "Bengaluru": {
+        "requested_lat": 12.97,
+        "requested_lon": 77.59,
+        "era5_grid_lat": 13.0,
+        "era5_grid_lon": 77.5,
+        "grid_elevation_m": 914
+      },
+      "Amritsar": {
+        "requested_lat": 31.63,
+        "requested_lon": 74.87,
+        "era5_grid_lat": 31.75,
+        "era5_grid_lon": 74.75,
+        "grid_elevation_m": 234
+      },
+      "Chennai": {
+        "requested_lat": 13.08,
+        "requested_lon": 80.27,
+        "era5_grid_lat": 13.0,
+        "era5_grid_lon": 80.25,
+        "grid_elevation_m": 10
+      },
+      "Hyderabad": {
+        "requested_lat": 17.39,
+        "requested_lon": 78.49,
+        "era5_grid_lat": 17.5,
+        "era5_grid_lon": 78.5,
+        "grid_elevation_m": 502
+      }
+    },
+    "raw_files": "data/raw/weather/openmeteo_<thành phố>_hourly.csv.gz (48384 dòng giờ mỗi thành phố)",
+    "output_files": {
+      "data/processed/weather_daily_8cities.csv": "16128 dòng (8 thành phố × 2016 ngày), 16 cột",
+      "data/processed/air_quality_8cities_weather.csv": "14056 dòng, 54 cột = air_quality_8cities.csv (40 cột, giữ nguyên) + 14 cột thời tiết"
+    },
+    "fields": {
+      "temp_mean": "Nhiệt độ không khí ở độ cao 2 m, trung bình ngày (°C)",
+      "temp_min": "Nhiệt độ thấp nhất trong ngày (°C)",
+      "temp_max": "Nhiệt độ cao nhất trong ngày (°C)",
+      "humidity_mean": "Độ ẩm tương đối ở 2 m, trung bình ngày (%)",
+      "pressure_mean": "Áp suất bề mặt, trung bình ngày (phụ thuộc độ cao: Bengaluru thấp hơn các thành phố khác) (hPa)",
+      "wind_speed_mean": "Tốc độ gió ở 10 m, trung bình ngày (m/s)",
+      "wind_speed_max": "Tốc độ gió giờ lớn nhất trong ngày (m/s)",
+      "wind_u": "Thành phần gió hướng Đông (dương = gió thổi về phía Đông), trung bình ngày (m/s)",
+      "wind_v": "Thành phần gió hướng Bắc (dương = gió thổi về phía Bắc), trung bình ngày (m/s)",
+      "wind_dir_8": "Hướng gió chính trong ngày (gió thổi TỪ hướng nào), 8 hướng. Chỉ để mô tả, không dùng làm biến số",
+      "precip_sum": "Tổng lượng mưa trong ngày (mm)",
+      "rain_day": "True nếu tổng mưa >= 1 mm",
+      "blh_mean": "Chiều cao lớp biên khí quyển, trung bình ngày (thấp = chất ô nhiễm bị nén sát mặt đất) (m)",
+      "blh_min": "Chiều cao lớp biên thấp nhất trong ngày (m)"
+    },
+    "missing_values": "Không có (dữ liệu tái phân tích phủ đủ mọi giờ); kiểm chứng trong notebooks/04_weather_merge.ipynb",
+    "known_limitations": [
+      "Dữ liệu mô hình trên lưới 0,25° (khoảng 25 km), không phải số đo tại trạm; AQI của CPCB là trung bình các trạm trong thành phố",
+      "Delhi và Gurugram ở hai ô lưới sát nhau, thời tiết gần như trùng nhau (tương quan theo ngày 0,95–0,999)",
+      "Thời tiết ngày mai trong dữ liệu là số đã xảy ra, không phải dự báo: khi dựng mô hình dự đoán chỉ nên dùng thời tiết đến hết ngày hôm nay, hoặc gọi rõ là kịch bản dự báo hoàn hảo"
+    ],
+    "collection_date": "2026-10-22"
   },
   "selected_cities_for_deep_analysis": {
     "criteria": "Độ phủ AQI trong đúng khoảng thời gian thành phố đó có trạm hoạt động (không tính khoảng trước khi có trạm) — xem chi tiết cách tính và bảng đầy đủ 26 thành phố trong dictionary.md",
-    "cities": ["Delhi", "Bengaluru", "Lucknow", "Chennai", "Hyderabad", "Jaipur", "Amritsar", "Gurugram"],
+    "cities": [
+      "Delhi",
+      "Bengaluru",
+      "Lucknow",
+      "Chennai",
+      "Hyderabad",
+      "Jaipur",
+      "Amritsar",
+      "Gurugram"
+    ],
     "assigned_pairs": {
-      "member_1": ["Delhi", "Gurugram"],
-      "member_2": ["Bengaluru", "Amritsar"],
-      "member_3": ["Lucknow", "Jaipur"],
-      "member_4": ["Chennai", "Hyderabad"]
+      "member_1": [
+        "Delhi",
+        "Gurugram"
+      ],
+      "member_2": [
+        "Bengaluru",
+        "Amritsar"
+      ],
+      "member_3": [
+        "Lucknow",
+        "Jaipur"
+      ],
+      "member_4": [
+        "Chennai",
+        "Hyderabad"
+      ]
     }
   },
   "team": {
     "course": "Khoa học dữ liệu",
-    "members": ["Dương Minh Tuấn", "Trần Hoàng Tùng", "Phạm Tuấn Mạnh", "Lưu Văn Lịch"]
+    "members": [
+      "Dương Minh Tuấn",
+      "Trần Hoàng Tùng",
+      "Phạm Tuấn Mạnh",
+      "Lưu Văn Lịch"
+    ]
   },
   "collection_date": "2026-09-24"
 }
