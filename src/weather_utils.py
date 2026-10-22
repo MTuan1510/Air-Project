@@ -74,6 +74,7 @@ RANGES = {
     "humidity_mean": (0, 100), "pressure_mean": (800, 1100),
     "wind_speed_mean": (0, 25), "wind_speed_max": (0, 40),
     "precip_sum": (0, 500),
+    "blh_mean": (0, 4500), "blh_min": (0, 4500),      # chỉ kiểm khi cột có trong bảng
 }
 
 
@@ -246,6 +247,8 @@ def check_ranges(daily):
     """Các ô nằm ngoài giới hạn vật lý (RANGES) và ngày có nhiệt độ min > mean hoặc mean > max. Mong đợi: bảng rỗng."""
     rows = []
     for col, (lo, hi) in RANGES.items():
+        if col not in daily.columns:
+            continue
         bad = daily[(daily[col] < lo) | (daily[col] > hi)]
         rows += [bad.assign(vi_pham=f"{col} ngoài [{lo}, {hi}]")[KEYS + [col, "vi_pham"]].rename(columns={col: "gia_tri"})]
     order = daily[(daily["temp_min"] > daily["temp_mean"] + 0.01) | (daily["temp_mean"] > daily["temp_max"] + 0.01)]
