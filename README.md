@@ -18,8 +18,8 @@ data/raw/          city_day.csv gốc (không sửa)
 data/raw/weather/  thời tiết theo giờ tải từ Open-Meteo (bản gốc, không sửa)
 data/processed/    air_quality_8cities.csv: bảng gộp 8 thành phố, dùng cho phân tích (do 01_cleaning tạo ra)
                    air_quality_8cities_weather.csv: bảng trên + 12 cột thời tiết (do 04_weather_merge tạo ra)
-notebooks/         01_cleaning, 02_cleaning_evidence, 03_eda, 04_weather_merge, 05_weather_correlation; archive/ là các notebook cũ (xem archive/README.md)
-src/               pipeline.py (pipeline làm sạch 8 thành phố), utils.py, gap_utils.py (hàm làm sạch), eda_utils.py (hàm EDA), weather_utils.py (tải và ghép thời tiết), corr_utils.py (tương quan thời tiết - AQI)
+notebooks/         01_cleaning, 02_cleaning_evidence, 03_eda, 04_weather_merge, 05_weather_correlation, 06_predict_aqi; archive/ là các notebook cũ (xem archive/README.md)
+src/               pipeline.py (pipeline làm sạch 8 thành phố), utils.py, gap_utils.py (hàm làm sạch), eda_utils.py (hàm EDA), weather_utils.py (tải và ghép thời tiết), corr_utils.py (tương quan thời tiết - AQI), model_utils.py (dự đoán AQI ngày mai và cảnh báo)
 reports/           cleaning_log_8cities.md (nhật ký làm sạch), cleaning_summary_8cities.csv, suspect_points_8cities.csv, figures/
 ```
 `data/interim/` và các file `data/processed/<thành phố>_clean.csv` là sản phẩm trung gian của các notebook cũ, **không còn được dùng**; có thể xoá.
@@ -41,7 +41,8 @@ Chạy lần lượt, mỗi notebook bằng *Kernel -> Restart & Run All*:
 | 3 | `03_eda.ipynb` | EDA: Phần A (ở đâu), B (khi nào), C (chất nào), kiểm tra độ nhạy, tổng hợp | `reports/figures/eda_00_*` đến `eda_05_*` |
 | 4 | `04_weather_merge.ipynb` | thêm biến thời tiết (Open-Meteo, ERA5) cho 8 thành phố: tải, kiểm tra, gộp theo ngày, ghép vào bảng chính | `data/processed/air_quality_8cities_weather.csv`, `data/processed/weather_daily_8cities.csv` |
 | 5 | `05_weather_correlation.ipynb` | thời tiết và AQI: tương quan thô so với sau khi bỏ chu kỳ mùa, 3 giả thuyết nêu trước (Bonferroni), độ ẩm (khám phá), kiểm tra độ nhạy | `reports/figures/corr_01_*` đến `corr_04_*` |
+| 6 | `06_predict_aqi.ipynb` | dự đoán AQI ngày mai và cảnh báo AQI ≥ 201: chia theo thời gian, 3 baseline, 3 mức đặc trưng (Ridge; cây để so), chẩn đoán phần dư, diễn giải hệ số, bootstrap theo khối, kiểm tra độ nhạy | `reports/figures/model_01_*` đến `model_05_*` |
 
-`02`, `03` và `04` đọc kết quả của `01`, nên chạy `01` trước; `05` cần thêm kết quả của `04`. `04` cần có mạng ở lần chạy đầu (tải thời tiết), các lần sau đọc lại từ `data/raw/weather/`. `01` không phụ thuộc file nào ngoài `data/raw/city_day.csv`. Kết quả từ raw trùng từng ô với bảng gộp mà các notebook cũ tạo ra.
+`02`, `03` và `04` đọc kết quả của `01`, nên chạy `01` trước; `05` và `06` cần thêm kết quả của `04`. `04` cần có mạng ở lần chạy đầu (tải thời tiết), các lần sau đọc lại từ `data/raw/weather/`. `01` không phụ thuộc file nào ngoài `data/raw/city_day.csv`. Kết quả từ raw trùng từng ô với bảng gộp mà các notebook cũ tạo ra.
 
 > Trên Colab, ô đầu của `01_cleaning` tự clone repo nếu chưa có. `02` và `03` cần mở từ thư mục `notebooks/` của repo.
